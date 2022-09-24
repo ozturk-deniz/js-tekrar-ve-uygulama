@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Elements</title>
+</head>
+<body> 
+    <!-- Tekil Element Seçimi -->
+    <div class="card-header">
+        <h3 class="card-title h3" id="title">Todo APP</h3>
+    </div>
+    <ul id="task-list">
+        <li>Görev1</li>
+        <li>Görev2</li>
+        <li>Görev3</li>
+    </ul>
+
+    <script>
+        let sonuc
+
+        sonuc = document.getElementById("title")  // İd'si title olan elementi seç
+        sonuc = document.getElementById("title").id  // Title'ın id bilgisini alma
+        sonuc = document.getElementById("title").className  // Title'ın class bilgisini alma
+        sonuc = document.getElementById("title").classList  // Title'ın class bilgilerini diziye alma
+
+        document.getElementById("title").style.fontSize = "30px" // id'si title olan elementtin font size'ını değiştirme
+        document.getElementById("title").style.color = "red" // id'si title olan elementtin rengini değiştirme
+        // document.getElementById("title").style.display = "none" // İd'si title olan elementi silme
+
+        document.getElementById("title").innerText = "TODO THE APP" // id'si title olan elementin içeriğini değiştirme
+        document.getElementById("title").innerHTML = "<p>Todo app</p>" // id'si title olan elementte p tag'ı ile yazı yazma
+        document.getElementById("title").innerText = "<p>Todo app</p>" // id'si title olan elementte p tag'ı ile yazı yazar ancak innerText tag'ları görmez
+
+        sonuc = document.querySelector("#title")  // id'si title olan ilk elemanı seçer(id seçeceksek #, class seçeceksek . kullanılır)
+        sonuc = document.querySelector(".card-header") // class'ı card-header olan ilk elemanı seç
+        sonuc = document.querySelector("div") // etikete göre eleman seçme (ilk elemanı seçer)
+
+
+        sonuc = document.querySelector("li") // İlk li elementini seçer
+        sonuc = document.querySelector("li:first-child") // ilk li elementini seçme
+        sonuc = document.querySelector("li:last-child") // son li elementini seçme
+        sonuc = document.querySelector("li:nth-child(2)") // 2. li elementini seçme
+
+
+
+        console.log(sonuc)
+    </script>
+
+
+
+</body>
+</html>

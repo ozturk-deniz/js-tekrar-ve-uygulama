@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Elements</title>
+</head>
+<body> 
+    <!-- Çoklu Element Seçimi -->
+    <div class="card-header">
+        <h3 class="card-title h3" id="title">Todo APP</h3>
+    </div>
+
+    <ul id="task-list">
+        <li class="task">Görev1</li>
+        <li class="task">Görev2</li>
+        <li class="task">Görev3</li>
+    </ul>
+    <ul id="task-list2">
+        <li class="task">Görev a</li>
+        <li class="task">Görev b</li>
+        <li class="task">Görev c</li>
+    </ul>
+
+
+
+    <script>
+        let sonuc, taskList
+
+        sonuc = document.getElementsByClassName("task")[0] // class'ı task olan 1. elemanı seçme
+        sonuc = document.getElementsByClassName("task")[1] // class'ı task olan 2. elemanı seçme
+
+        // taskList = document.getElementsByClassName("task") // class'ı task olan elemanları seçme
+        // ul = document.getElementsById("task-list")
+        // taskList = ul.getElementsByTagName("li") // id'si task-list olan bütün li elemantlerini seçti
+        
+        taskList = document.querySelectorAll("li") // Bütün li elementlerini seçme
+        taskList = document.querySelectorAll("#task-list li") // id'si task-list olan bütün li elemantlerini seçti
+
+        for(let i = 0; i < taskList.length; i++) { // class'ı task olan elemanları yazdırma
+            console.log(taskList[i])
+        }
+
+        for  ( let task of taskList) {
+            task.style.color = "red" // değişken(index).style.cssOzelliği şeklinde kullanılıyor
+            task.style.fontSize = "40px"
+            // task.innerText = "Item" // elemanları değiştirme
+        }
+       
+        
+
+        // console.log(sonuc)
+    </script>
+
+
+
+</body>
+</html>
